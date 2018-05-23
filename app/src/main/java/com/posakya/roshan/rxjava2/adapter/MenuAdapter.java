@@ -60,8 +60,14 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyViewHolder>{
 
         System.out.println("MenuType : "+menuClass.getMenu_Type());
 
+        /*
+           http://192.168.2.1/zappfood/Image/ <--- this is image path
+
+           if image key in json consists the url to image then just omit this and use menuClass.getImage() only
+         */
+
         Glide.with(context)
-                .load(menuClass.getImage()).listener(new RequestListener<String, GlideDrawable>() {
+                .load("http://192.168.2.1/zappfood/Image/"+menuClass.getImage()).listener(new RequestListener<String, GlideDrawable>() {
             @Override
             public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
                 holder.progressBar.setVisibility(View.GONE);
@@ -74,6 +80,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyViewHolder>{
                 return false;
             }
         }).thumbnail(0.5f).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.menu_image);
+
+        //// RecyclerView on click listener
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

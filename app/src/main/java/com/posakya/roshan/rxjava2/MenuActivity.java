@@ -74,7 +74,7 @@ public class MenuActivity extends AppCompatActivity {
 
                     menuClass.setItem_Name(menuClasses.get(i).getItem_Name());
                     menuClass.setMenu_Type(menuClasses.get(i).getMenu_Type());
-                    menuClass.setImage("http://192.168.2.1/zappfood/Image/"+menuClasses.get(i).getImage());
+                    menuClass.setImage(menuClasses.get(i).getImage());
 
                     list.add(menuClass);
 
