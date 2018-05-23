@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -51,7 +52,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyViewHolder>{
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-        MenuClass menuClass = menuClasses.get(position);
+        final MenuClass menuClass = menuClasses.get(position);
 
 
         holder.txt_menu_title.setText(Html.fromHtml(menuClass.getMenu_Type()));
@@ -74,6 +75,15 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyViewHolder>{
             }
         }).thumbnail(0.5f).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.menu_image);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(context, "You Clicked "+menuClass.getItem_Name(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
     }
 
     @Override
@@ -95,6 +105,9 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyViewHolder>{
             txt_menu_title = itemView.findViewById(R.id.menu_title);
             menu_image = itemView.findViewById(R.id.menu_image);
             progressBar = itemView.findViewById(R.id.progressBar);
+
         }
+
+
     }
 }

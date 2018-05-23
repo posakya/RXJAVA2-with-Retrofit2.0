@@ -41,7 +41,7 @@ public class MenuActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        getMenuJson("Salad");
+        getMenuJson("Bakery Items");
     }
 
     public void getMenuJson(String Menu_Type){
