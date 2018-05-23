@@ -57,6 +57,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MyViewHolder>{
         holder.txt_menu_title.setText(Html.fromHtml(menuClass.getMenu_Type()));
         holder.txt_menu_desc.setText(Html.fromHtml(menuClass.getItem_Name()));
 
+        System.out.println("MenuType : "+menuClass.getMenu_Type());
+
         Glide.with(context)
                 .load(menuClass.getImage()).listener(new RequestListener<String, GlideDrawable>() {
             @Override

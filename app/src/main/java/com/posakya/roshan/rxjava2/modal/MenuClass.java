@@ -75,9 +75,10 @@ public class MenuClass
         return Item_Name;
     }
 
-    public void setItem_Name (String Item_Name)
+    public String setItem_Name (String Item_Name)
     {
         this.Item_Name = Item_Name;
+        return Item_Name;
     }
 
     public String getMenu_Type ()
