@@ -67,18 +67,22 @@ public class MenuActivity extends AppCompatActivity {
                 System.out.println("NEXt");
 
                 list = new ArrayList<>();
-
-                for (int i=0; i<menuClasses.size(); i++){
-
-                    MenuClass menuClass = new MenuClass();
-
-                    menuClass.setItem_Name(menuClasses.get(i).getItem_Name());
-                    menuClass.setMenu_Type(menuClasses.get(i).getMenu_Type());
-                    menuClass.setImage(menuClasses.get(i).getImage());
-
+                
+                 for (MenuClass menuClass : menuClasses){
                     list.add(menuClass);
-
                 }
+
+//                 for (int i=0; i<menuClasses.size(); i++){
+
+//                     MenuClass menuClass = new MenuClass();
+
+//                     menuClass.setItem_Name(menuClasses.get(i).getItem_Name());
+//                     menuClass.setMenu_Type(menuClasses.get(i).getMenu_Type());
+//                     menuClass.setImage(menuClasses.get(i).getImage());
+
+//                     list.add(menuClass);
+
+//                 }
 
                 menuAdapter = new MenuAdapter(list,MenuActivity.this);
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MenuActivity.this);
