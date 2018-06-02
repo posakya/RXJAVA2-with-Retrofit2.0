@@ -7,7 +7,7 @@ Dependency for android support library
     
 Dependency for RecyclerView
 
-    implementation 'com.android.support:recyclerview-v7:26.+'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
     
 Dependency for CardView
 
