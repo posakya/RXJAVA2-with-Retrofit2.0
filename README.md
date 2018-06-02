@@ -43,5 +43,5 @@ Dependency for ImageLoading library i.e. Glide
     
 For horizontal recycler view
 
-LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
-recyclerView.setLayoutManager(horizontalLayoutManagaer);
+LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
+recyclerView.setLayoutManager(horizontalLayoutManager);
