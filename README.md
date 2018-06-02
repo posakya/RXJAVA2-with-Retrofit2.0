@@ -40,3 +40,8 @@ Dependency for Animated progressbar
 Dependency for ImageLoading library i.e. Glide
 
     implementation 'com.github.bumptech.glide:glide:3.5.2'
+    
+For horizontal recycler view
+
+LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
+recyclerView.setLayoutManager(horizontalLayoutManagaer);
